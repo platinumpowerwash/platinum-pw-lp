@@ -229,6 +229,14 @@ footer a{color:var(--gray-600);text-decoration:underline}
   .trust-row{gap:14px}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17924304364"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17924304364');
+</script>
 </head>
 <body>
 <div class="topbar">
@@ -542,6 +550,7 @@ document.getElementById('submit-btn').addEventListener('click',function(){
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:n,phone:p,source:'google_ads_lp',timestamp:new Date().toISOString()})
   }).catch(()=>{});
+  gtag('event', 'conversion', {'send_to': 'AW-17924304364/rO4iCO3i5YgcEOzb_OJC'});
   document.getElementById('ff').style.display='none';
   document.getElementById('fsuccess').style.display='block';
   document.querySelector('.ft').style.display='none';
