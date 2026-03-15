@@ -545,7 +545,7 @@ document.getElementById('submit-btn').addEventListener('click',function(){
   const p=document.getElementById('lead-phone').value.trim();
   if(!n){document.getElementById('lead-name').focus();return}
   if(!p||p.length<7){document.getElementById('lead-phone').focus();return}
-  fetch('https://platinumpowerwash.app.n8n.cloud/webhook-test/ppw-site-quote-form',{
+  fetch('https://platinumpowerwash.app.n8n.cloud/webhook/ppw-site-quote-form',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:n,phone:p,source:'google_ads_lp',timestamp:new Date().toISOString()})
